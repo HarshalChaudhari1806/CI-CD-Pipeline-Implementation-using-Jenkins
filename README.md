@@ -1,38 +1,40 @@
-# django-todo
-A simple todo app built with django
+# CI/CD Pipeline Implementation using Jenkins 
 
-![todo App](https://raw.githubusercontent.com/shreys7/django-todo/develop/staticfiles/todoApp.png)
-### Setup
-To get this repository, run the following command inside your git enabled terminal
+This project demonstrates an end-to-end CI/CD pipeline using **Jenkins**, **GitHub**, **Docker**, and **AWS EC2**. It automates the process of building, testing, and deploying a Django ToDo application.
+
+---
+
+## 🚀 Features
+
+- CI/CD pipeline using **Jenkins**
+- Dockerized Django application
+- Automated deployment to **AWS EC2**
+- Integration with **GitHub** for source control
+- Real-time build, test, and deployment automation
+- Infrastructure-as-Code using **Jenkinsfile**
+
+---
+
+## 🛠️ Tech Stack
+
+- Python, Django
+- Jenkins
+- Docker
+- Git & GitHub
+- AWS EC2
+- Nginx (Optional for reverse proxy)
+- Webhooks (for GitHub-Jenkins integration)
+
+---
+
+## 📦 Project Structure
+
 ```bash
-$ git clone https://github.com/shreys7/django-todo.git
-```
-You will need django to be installed in you computer to run this app. Head over to https://www.djangoproject.com/download/ for the download guide
-
-Once you have downloaded django, go to the cloned repo directory and run the following command
-
-```bash
-$ python manage.py makemigrations
-```
-
-This will create all the migrations file (database migrations) required to run this App.
-
-Now, to apply this migrations run the following command
-```bash
-$ python manage.py migrate
-```
-
-One last step and then our todo App will be live. We need to create an admin user to run this App. On the terminal, type the following command and provide username, password and email for the admin user
-```bash
-$ python manage.py createsuperuser
-```
-
-That was pretty simple, right? Now let's make the App live. We just need to start the server now and then we can start using our simple todo App. Start the server by following command
-
-```bash
-$ python manage.py runserver
-```
-
-Once the server is hosted, head over to http://127.0.0.1:8000/todos for the App.
-
-Cheers and Happy Coding :)
+.
+├── Jenkinsfile         # Pipeline as code
+├── Dockerfile          # Docker build instructions
+├── docker-compose.yml  # Optional for multi-container setup
+├── requirements.txt
+├── manage.py
+├── todo/               # Django project folder
+└── README.md
